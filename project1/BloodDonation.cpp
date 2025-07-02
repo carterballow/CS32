@@ -1,4 +1,5 @@
 #include "BloodDonation.h"
+#include "DateUtility.h" // Include the utility to use its functions
 #include <iostream>
 
 BloodDonation::BloodDonation(int id, int age, double weight, std::string date) {
@@ -15,9 +16,7 @@ BloodDonation::BloodDonation(int id) {
     mDate = "";
 }
 
-BloodDonation::~BloodDonation() {
-    std::cout << "BloodDonation " << mID << " destroyed" << std::endl;
-}
+BloodDonation::~BloodDonation() {}
 
 int BloodDonation::getID() const { return mID; }
 int BloodDonation::getAge() const { return mAge; }
@@ -37,9 +36,14 @@ void BloodDonation::setWeight(double weight) {
 }
 
 void BloodDonation::setDate(const std::string& date) {
-    mDate = date;
+    // Use the centralized validation function from DateUtility.
+    if (DateUtility::isValidDate(date)) {
+        mDate = date;
+    } else {
+        // If validation fails, set to the default invalid state.
+        mDate = "";
+    }
 }
-
 void BloodDonation::print() const {
     std::cout << "ID: " << mID << ", Age: " << mAge << ", Weight: " << mWeight << ", Date: " << mDate << std::endl;
 }

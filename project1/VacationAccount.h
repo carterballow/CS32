@@ -5,21 +5,21 @@
 
 class VacationAccount {
 private:
-    int mID;
-    double mBalance;
-    BloodDonation** donationHistory;
-    int historySize;
+	int mID;
+	double mBalance;
+	BloodDonation** donationHistory;
+	int historySize;
 
 public:
-    VacationAccount(int id);
-    VacationAccount(const VacationAccount& other);
-    ~VacationAccount();
+	VacationAccount(int id);
+	VacationAccount(const VacationAccount& other);
+	~VacationAccount();
 
-    int getID() const;
-    double getBalance() const;
+	int getID() const;
+	double getBalance() const;
 
-    bool addVacationToAccount(BloodDonation* donation);
-    void printDonationHistory() const;
+	bool addVacationToAccount(BloodDonation* donation);
+	void printDonationHistory() const;
 };
 
 #endif

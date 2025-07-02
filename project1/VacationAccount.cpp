@@ -29,7 +29,7 @@ double VacationAccount::getBalance() const { return mBalance; }
 
 bool VacationAccount::addVacationToAccount(BloodDonation* donation) {
     if (!donation || donation->getID() != mID || donation->getID() == -1 ||
-        donation->getAge() == -1 || donation->getWeight() == -1)
+        donation->getAge() == -1 || donation->getWeight() == -1 || donation->getDate() == "")
         return false;
 
     for (int i = 0; i < historySize; ++i) {
