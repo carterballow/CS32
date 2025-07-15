@@ -1,0 +1,58 @@
+TaskList ADT Specification (Project 2)
+
+Abstract Data Type: TaskList
+
+Type: TaskList
+Data:
+  - Doubly linked list of tasks (each task is a string (std::string))
+  - Tracks head and tail pointers
+  - Tracks size of list
+
+Operations:
+  Constructor TaskList()
+  Destructor ~TaskList()
+  Copy Constructor TaskList(const TaskList& other)
+  Assignment operator=(const TaskList& rhs)
+
+  bool empty() const
+    - Returns true if the list has no tasks
+
+  int size() const
+    - Returns the number of tasks in the list
+
+  void addBack(const std::string& task)
+    - Adds task to the end of the list
+
+  bool removeFront()
+    - Removes the task at the front of the list
+    - Returns true if removal was successful
+
+  bool get(int pos, std::string& task) const
+    - Sets task to the task at index pos (0-based)
+    - Returns true if successful
+
+  int find(const std::string& task) const
+    - Returns the index of the first occurrence of task
+    - Returns -1 if not found
+
+  void clear()
+    - Empties the entire list and frees memory
+
+  void printAll() const
+    - Prints all tasks to cerr (one per line)
+
+UML Interface Summary:
+----------------------
++ TaskList()
++ ~TaskList()
++ TaskList(const TaskList&)
++ operator=(const TaskList&) : TaskList&
+
++ empty() : bool
++ size() : int
++ addBack(task: string) : void
++ removeFront() : bool
++ get(pos: int, task: string&) : bool
++ find(task: string) : int
++ clear() : void
++ printAll() : void

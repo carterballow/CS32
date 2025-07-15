@@ -1,0 +1,17 @@
+CSCI Project 2 - TaskList
+==========================
+
+Student Name: _________________________
+Date: ________________________________
+
+Design Description:
+-------------------
+(Describe your linked list design, node structure, use of head/tail pointers.)
+
+Pseudocode:
+-----------
+(Add pseudocode for your major functions such as addBack, removeFront, get, find, copyList, etc.)
+
+Test Cases:
+-----------
+(List and describe test cases you used to validate your implementation.)
